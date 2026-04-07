@@ -1,0 +1,1217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadisa Gutema | Full Stack Developer</title>
+    <meta name="description" content="Gadisa Gutema - Full Stack Developer Portfolio. متخصص in Java, Flutter, PHP, and Web Development.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+  // ============================================================
+  // EMAILJS SETUP — Follow steps below to activate:
+  // 1. Go to https://www.emailjs.com and create a FREE account
+  // 2. Add an Email Service (Gmail recommended) → copy Service ID
+  // 3. Create an Email Template → copy Template ID
+  // 4. Go to Account → copy your Public Key
+  // 5. Replace the 3 values below with yours:
+  // ============================================================
+        const EMAILJS_SERVICE_ID = "service_wfttyc4";
+        const EMAILJS_TEMPLATE_ID = "template_fxlk6j9";
+        const EMAILJS_PUBLIC_KEY = "PU9bSQJJgQdp9gv6s";
+
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0a1628;
+            --navy2: #0f2040;
+            --navy3: #162d55;
+            --gold: #c9a84c;
+            --gold2: #e8c86d;
+            --white: #f8f6f0;
+            --muted: #9aaccb;
+            --text: #d4dff0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--navy);
+            color: var(--text);
+            font-family: 'DM Sans',sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10,22,40,0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+            padding: 0 5%;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display',serif;
+            font-size: 22px;
+            color: var(--gold);
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+            .nav-links a {
+                color: var(--muted);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                transition: color 0.2s;
+            }
+
+                .nav-links a:hover {
+                    color: var(--gold);
+                }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5% 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,168,76,0.07) 0%,transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-line {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 0 auto 28px;
+        }
+
+        .hero-tag {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(2.8rem,7vw,5.5rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.08;
+            margin-bottom: 18px;
+        }
+
+            .hero-name span {
+                color: var(--gold);
+            }
+
+        .hero-role {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 36px;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 13px 34px;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s,transform 0.15s;
+            cursor: pointer;
+            border: none;
+            font-family: 'DM Sans',sans-serif;
+        }
+
+            .btn-gold:hover {
+                background: var(--gold2);
+                transform: translateY(-2px);
+            }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 13px 34px;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+            .btn-outline:hover {
+                background: rgba(201,168,76,0.1);
+            }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .scroll-dot {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom,var(--gold),transparent);
+            animation: scrollpulse 2s infinite;
+        }
+
+        @keyframes scrollpulse {
+            0%,100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* SECTION COMMON */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(2rem,4vw,3rem);
+            color: var(--white);
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+            margin-bottom: 50px;
+        }
+
+        /* ABOUT */
+        #about {
+            background: var(--navy2);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            background: var(--navy3);
+            border: 2px solid rgba(201,168,76,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display',serif;
+            font-size: 5rem;
+            color: var(--gold);
+            max-width: 300px;
+        }
+
+        .about-text p {
+            color: var(--text);
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .about-facts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .fact {
+            background: var(--navy3);
+            border: 1px solid rgba(201,168,76,0.12);
+            border-radius: 4px;
+            padding: 16px 18px;
+        }
+
+        .fact-label {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .fact-value {
+            font-size: 15px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* SKILLS */
+        #skills {
+            background: var(--navy);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--navy2);
+            border: 1px solid rgba(201,168,76,0.12);
+            border-radius: 4px;
+            padding: 24px;
+        }
+
+        .skill-card-title {
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .skill-item {
+            margin-bottom: 14px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .skill-pct {
+            color: var(--gold);
+            font-size: 13px;
+        }
+
+        .skill-bar {
+            height: 3px;
+            background: rgba(201,168,76,0.12);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg,var(--gold),var(--gold2));
+            border-radius: 2px;
+            transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        /* SERVICES */
+        #services {
+            background: var(--navy2);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--navy3);
+            border: 1px solid rgba(201,168,76,0.1);
+            border-radius: 4px;
+            padding: 32px 24px;
+            transition: border-color 0.25s,transform 0.2s;
+        }
+
+            .service-card:hover {
+                border-color: rgba(201,168,76,0.4);
+                transform: translateY(-4px);
+            }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .service-title {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* PROJECTS */
+        #projects {
+            background: var(--navy);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--navy2);
+            border: 1px solid rgba(201,168,76,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: border-color 0.25s,transform 0.2s;
+        }
+
+            .project-card:hover {
+                border-color: rgba(201,168,76,0.35);
+                transform: translateY(-4px);
+            }
+
+        .project-thumb {
+            height: 8px;
+            background: linear-gradient(90deg,var(--gold),var(--gold2));
+        }
+
+        .project-body {
+            padding: 24px;
+        }
+
+        .project-tag {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .badge {
+            background: rgba(201,168,76,0.1);
+            color: var(--gold);
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+            border: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 14px;
+        }
+
+        .project-link {
+            font-size: 13px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(201,168,76,0.3);
+            transition: border-color 0.2s;
+        }
+
+            .project-link:hover {
+                border-color: var(--gold);
+            }
+
+        /* EXPERIENCE */
+        #experience {
+            background: var(--navy2);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 8px;
+                bottom: 8px;
+                width: 1px;
+                background: rgba(201,168,76,0.2);
+            }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 44px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -29px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 2px solid var(--navy2);
+        }
+
+        .timeline-period {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .timeline-role {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .timeline-company {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .timeline-desc {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* RESUME BANNER */
+        #resume {
+            background: var(--navy3);
+            border-top: 1px solid rgba(201,168,76,0.15);
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .resume-title {
+            font-family: 'Playfair Display',serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .resume-sub {
+            color: var(--muted);
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+
+        .resume-note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 14px;
+            opacity: 0.7;
+        }
+
+        /* CONTACT */
+        #contact {
+            background: var(--navy);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 4px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+            .contact-link:hover {
+                color: var(--gold);
+            }
+
+        .contact-link-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--navy2);
+            border: 1px solid rgba(201,168,76,0.15);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-label {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .form-input {
+            background: var(--navy2);
+            border: 1px solid rgba(201,168,76,0.15);
+            border-radius: 3px;
+            padding: 12px 16px;
+            color: var(--white);
+            font-family: 'DM Sans',sans-serif;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+            width: 100%;
+        }
+
+            .form-input:focus {
+                border-color: rgba(201,168,76,0.5);
+            }
+
+            .form-input::placeholder {
+                color: var(--muted);
+                opacity: 0.7;
+            }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Send button states */
+        .form-btn {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'DM Sans',sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s,opacity 0.2s;
+            width: 100%;
+        }
+
+            .form-btn:hover:not(:disabled) {
+                background: var(--gold2);
+            }
+
+            .form-btn:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+        .form-status {
+            font-size: 14px;
+            padding: 12px 16px;
+            border-radius: 3px;
+            display: none;
+            text-align: center;
+        }
+
+            .form-status.success {
+                display: block;
+                background: rgba(30,180,100,0.12);
+                border: 1px solid rgba(30,180,100,0.3);
+                color: #5fda9a;
+            }
+
+            .form-status.error {
+                display: block;
+                background: rgba(220,60,60,0.12);
+                border: 1px solid rgba(220,60,60,0.3);
+                color: #f08080;
+            }
+
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(201,168,76,0.1);
+            padding: 32px 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease,transform 0.7s ease;
+        }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media(max-width:768px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-avatar {
+                max-width: 180px;
+                font-size: 3rem;
+                margin: 0 auto;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-logo" href="#hero">GG</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div>
+            <div class="hero-tag">Full Stack Developer · Flutter · Java · PHP</div>
+            <div class="hero-line"></div>
+            <h1 class="hero-name">Gadisa <span>Gutema</span></h1>
+            <p class="hero-role">Building elegant, scalable web &amp; mobile solutions from Ethiopia to the world</p>
+            <div class="hero-btns">
+                <a class="btn-gold" href="#projects">View Projects</a>
+                <a class="btn-outline" href="#contact">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <img src="https://i.postimg.cc/1RY9nWMf/JS3A8230.jpg"
+                     alt="Gadisa Gutema"
+                     class="about-avatar"
+                     style="object-fit: cover;" />
+                <div class="fade-in">
+                    <p class="section-label">About Me</p>
+                    <h2 class="section-title">A Passionate Developer &amp; Problem Solver</h2>
+                    <div class="section-divider"></div>
+                    <p>I'm a 4th-year Software Engineering student at Adama Science &amp; Technology University, Ethiopia. I build modern web and mobile applications with a strong focus on clean architecture, real-world usability, and continuous learning.</p>
+                    <p>Trained at RITA Africa Bootcamp and Dereja Digital Literacy Program. I combine academic foundations with self-taught skills across Java, Flutter, PHP, JavaScript, and more.</p>
+                    <div class="about-facts">
+                        <div class="fact"><div class="fact-label">Location</div><div class="fact-value">Adama, Ethiopia</div></div>
+                        <div class="fact"><div class="fact-label">Education</div><div class="fact-value">ASTU — Software Eng.</div></div>
+                        <div class="fact"><div class="fact-label">Experience</div><div class="fact-value">Zergaw Cloud (2025)</div></div>
+                        <div class="fact"><div class="fact-label">Available For</div><div class="fact-value">Remote / Freelance</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-inner">
+            <p class="section-label">What I Know</p>
+            <h2 class="section-title">Skills &amp; Technologies</h2>
+            <div class="section-divider"></div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-card-title">Frontend</div>
+                    <div class="skill-item"><div class="skill-name"><span>HTML / CSS</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>JavaScript</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>React (Learning)</span><span class="skill-pct">45%</span></div><div class="skill-bar"><div class="skill-fill" data-w="45%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>Flutter / Dart</span><span class="skill-pct">55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="55%" style="width:0"></div></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-card-title">Backend</div>
+                    <div class="skill-item"><div class="skill-name"><span>Java / Java Swing</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-w="82%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>PHP</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>Python</span><span class="skill-pct">68%</span></div><div class="skill-bar"><div class="skill-fill" data-w="68%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>C# / .NET</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="65%" style="width:0"></div></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-card-title">Database &amp; Tools</div>
+                    <div class="skill-item"><div class="skill-name"><span>MS SQL Server / T-SQL</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>MySQL</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>Git / GitHub</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75%" style="width:0"></div></div></div>
+                    <div class="skill-item"><div class="skill-name"><span>NumPy / Pandas</span><span class="skill-pct">50%</span></div><div class="skill-bar"><div class="skill-fill" data-w="50%" style="width:0"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-inner">
+            <p class="section-label">What I Offer</p>
+            <h2 class="section-title">Services</h2>
+            <div class="section-divider"></div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌐</div>
+                    <div class="service-title">Web Development</div>
+                    <p class="service-desc">Full-stack web apps built with HTML/CSS/JS, PHP, and modern frameworks. Clean UI, responsive design, and solid backend logic.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📱</div>
+                    <div class="service-title">Mobile Development</div>
+                    <p class="service-desc">Cross-platform mobile apps using Flutter &amp; Dart. Smooth UI/UX for Android and iOS from a single codebase.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🗄️</div>
+                    <div class="service-title">Database Design</div>
+                    <p class="service-desc">Designing and managing relational databases using MS SQL Server, MySQL, and T-SQL for efficient, scalable data management.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎨</div>
+                    <div class="service-title">UI/UX Design</div>
+                    <p class="service-desc">Intuitive, visually appealing interfaces that balance aesthetics with usability — from wireframe to final product.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-title">Desktop Applications</div>
+                    <p class="service-desc">Java Swing and C# desktop apps with full CRUD functionality, MS SQL Server integration, and polished UIs.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📚</div>
+                    <div class="service-title">Tech Mentoring</div>
+                    <p class="service-desc">Teaching programming fundamentals and real-world development to beginners — structured, practical, and beginner-friendly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-inner">
+            <p class="section-label">My Work</p>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-divider"></div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">E-Commerce</div>
+                        <div class="project-title">G&amp;G Online Store</div>
+                        <p class="project-desc">A full-featured e-commerce frontend with product listings, cart, and responsive layout built from scratch.</p>
+                        <div class="project-stack"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator/FUTURE_FS_01" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">E-Learning Platform</div>
+                        <div class="project-title">YG E-Learning Platform</div>
+                        <p class="project-desc">An online learning platform with course management, student dashboard, and modern UI improvements.</p>
+                        <div class="project-stack"><span class="badge">PHP</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">MySQL</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">Marketplace</div>
+                        <div class="project-title">StudentMarketHub</div>
+                        <p class="project-desc">A student marketplace with buyer/seller registration, product listings, and authentication system.</p>
+                        <div class="project-stack"><span class="badge">PHP</span><span class="badge">MySQL</span><span class="badge">CSS</span><span class="badge">JS</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator/StudentMarketHub/" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">Healthcare · Desktop</div>
+                        <div class="project-title">Patient Management System</div>
+                        <p class="project-desc">C# desktop application with full CRUD for patient records, integrated with MS SQL Server via Visual Studio 2022.</p>
+                        <div class="project-stack"><span class="badge">C#</span><span class="badge">MS SQL Server</span><span class="badge">SSMS</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">Java · Desktop</div>
+                        <div class="project-title">Bookstore Management System</div>
+                        <p class="project-desc">A Java-based desktop bookstore system with OOP principles, inventory management, and a Swing GUI.</p>
+                        <div class="project-stack"><span class="badge">Java</span><span class="badge">Java Swing</span><span class="badge">OOP</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb"></div>
+                    <div class="project-body">
+                        <div class="project-tag">Python · Auth</div>
+                        <div class="project-title">Task Management System</div>
+                        <p class="project-desc">Python-based modular user authentication and task tracking system — built during the RITA Africa Bootcamp.</p>
+                        <div class="project-stack"><span class="badge">Python</span><span class="badge">Modular Design</span></div>
+                        <div class="project-links"><a class="project-link" href="https://github.com/Gade-creator" target="_blank">GitHub →</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="section-inner">
+            <p class="section-label">My Journey</p>
+            <h2 class="section-title">Experience &amp; Education</h2>
+            <div class="section-divider"></div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-period">Mar 2026 – Apr 2026</div>
+                    <div class="timeline-role">Full Stack Web Development Intern</div>
+                    <div class="timeline-company">Future Interns — Remote</div>
+                    <p class="timeline-desc">Building a personal portfolio website, a Mini CRM system, and a real business website as part of a structured self-paced internship program.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-period">Jul 2025 – Sep 2025</div>
+                    <div class="timeline-role">Software Engineering Intern</div>
+                    <div class="timeline-company">Zergaw Cloud — Ethiopia</div>
+                    <p class="timeline-desc">Gained hands-on experience in cloud-based software development, working on real-world projects and collaborating with a professional engineering team.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-period">2024</div>
+                    <div class="timeline-role">Bootcamp Graduate</div>
+                    <div class="timeline-company">RITA Africa Bootcamp</div>
+                    <p class="timeline-desc">Completed intensive training in Python, modular programming, user authentication, and full-stack project development.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-period">2023</div>
+                    <div class="timeline-role">Digital Literacy Trainee</div>
+                    <div class="timeline-company">Dereja — Ethiopia</div>
+                    <p class="timeline-desc">Trained in digital skills, professional online presence, and foundational tech knowledge to bridge academic learning with industry practice.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-period">2022 – Present</div>
+                    <div class="timeline-role">B.Sc. Software Engineering (4th Year)</div>
+                    <div class="timeline-company">Adama Science &amp; Technology University</div>
+                    <p class="timeline-desc">Strong academic performance with a focus on algorithms, OOP, database systems, and software architecture — supplemented by extensive self-learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME DOWNLOAD -->
+    <section id="resume">
+        <div class="section-inner" style="text-align:center;">
+            <p class="section-label">My CV</p>
+            <h2 class="resume-title" style="font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--white);margin-bottom:10px;">Download My Resume</h2>
+            <p style="color:var(--muted);margin-bottom:32px;">Get a complete overview of my skills, education, and experience.</p>
+            <!--
+              HOW TO MAKE CV DOWNLOADABLE:
+              1. Name your resume file: Gadisa_Gutema_Resume.pdf
+              2. Put it in: assets/resume/Gadisa_Gutema_Resume.pdf
+              3. The button below will download it automatically
+            -->
+            <a id="cv-download-btn"
+               class="btn-gold"
+               href="Gadisa-Gutema-FlowCV-Resume-20250227.pdf"
+               download="Gadisa_Gutema_Resume.pdf">
+                ⬇ Download CV (PDF)
+            </a>
+            <p style="font-size:12px;color:var(--muted);margin-top:14px;opacity:0.7;">
+                Place your PDF at: <code style="color:var(--gold);font-size:11px;">assets/resume/Gadisa_Gutema_Resume.pdf</code>
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="section-divider"></div>
+            <div class="contact-grid">
+                <div class="fade-in">
+                    <p style="color:var(--muted);margin-bottom:28px;">Available for remote work, freelance projects, and collaborations. Let's build something great together.</p>
+                    <div class="contact-links">
+                        <!-- UPDATE these with your real info -->
+                        <a class="contact-link" href="mailto:gadisagutema943@gmail.com">
+                            <div class="contact-link-icon">✉</div>gadisagutema943@gmail.com
+                        </a>
+                        <a class="contact-link" href="https://github.com/Gade-creator/" target="_blank">
+                            <div class="contact-link-icon">⌥</div>github
+                        </a>
+                        <a class="contact-link" href="https://www.linkedin.com/in/gadisa-gutema-b5270235a" target="_blank">
+                            <div class="contact-link-icon">in</div>linkedin
+                        </a>
+                        <a class="contact-link" href="#">
+                            <div class="contact-link-icon">📍</div>Addis Abeba|Adama, Ethiopia (Open to Remote)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM powered by EmailJS -->
+                <div class="fade-in">
+                    <div class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Your Name</label>
+                            <input class="form-input" type="text" id="from_name" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input class="form-input" type="email" id="from_email" placeholder="john@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input class="form-input" type="text" id="subject" placeholder="Project Inquiry" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input form-textarea" id="message" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <div class="form-status" id="formStatus"></div>
+                        <button class="form-btn" id="sendBtn" onclick="sendEmail()">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Gadisa Gutema</div>
+        <p class="footer-copy">© 2026 Gadisa Gutema. All rights reserved. Built with passion from Ethiopia 🇪🇹</p>
+    </footer>
+
+    <script>
+        /* ── Scroll animations ── */
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    e.target.querySelectorAll('.skill-fill').forEach(b => { b.style.width = b.dataset.w; });
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-in, .skill-card').forEach(el => obs.observe(el));
+
+        /* ── EmailJS Send ── */
+        function sendEmail() {
+            const name = document.getElementById('from_name').value.trim();
+            const email = document.getElementById('from_email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const btn = document.getElementById('sendBtn');
+            const status = document.getElementById('formStatus');
+
+            /* Basic validation */
+            if (!name || !email || !message) {
+                showStatus('error', 'Please fill in your name, email, and message.');
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showStatus('error', 'Please enter a valid email address.');
+                return;
+            }
+
+            /* Check EmailJS keys are configured */
+            if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID') {
+                showStatus('error', 'EmailJS is not configured yet. See the setup instructions in the HTML file.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Sending…';
+            status.style.display = 'none';
+
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                to_name: 'Gadisa Gutema',
+                from_name: name,
+                from_email: email,
+                subject: subject || 'Portfolio Contact',
+                message: message,
+            })
+                .then(() => {
+                    showStatus('success', '✓ Message sent! I will get back to you soon.');
+                    document.getElementById('from_name').value = '';
+                    document.getElementById('from_email').value = '';
+                    document.getElementById('subject').value = '';
+                    document.getElementById('message').value = '';
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                })
+                .catch((err) => {
+                    console.error('EmailJS error:', err);
+                    showStatus('error', 'Something went wrong. Please try emailing me directly.');
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                });
+        }
+
+        function showStatus(type, msg) {
+            const el = document.getElementById('formStatus');
+            el.className = 'form-status ' + type;
+            el.textContent = msg;
+        }
+    </script>
+</body>
+</html>
